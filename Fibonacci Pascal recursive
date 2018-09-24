@@ -1,0 +1,16 @@
+
+
+
+def Fi_Pa(m):
+    """Uses Pascal's triangle from Pascal(n-1) to calculate the (n) Fibonacci number.
+    """
+    f = 0
+    if m%2 != 0:
+        j = m + 1
+        j = int(j / 2 )
+    else: j = int(m / 2 )
+    print(j) 
+    for k in range(1, j+1):
+        f = f + Pascal_recursive(m-k)[k-1]
+    return f
+    ----------------------------------------------------------------------
